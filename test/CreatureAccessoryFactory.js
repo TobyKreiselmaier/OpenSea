@@ -8,18 +8,12 @@ const vals = require('../lib/valuesCommon.js');
 
 /* Contracts in this test */
 
-const MockProxyRegistry = artifacts.require(
-  "../contracts/MockProxyRegistry.sol"
-);
-const LootBoxRandomness = artifacts.require(
-  "../contracts/LootBoxRandomness.sol"
-);
-const CreatureAccessory = artifacts.require("../contracts/CreatureAccessory.sol");
-const CreatureAccessoryFactory = artifacts.require("../contracts/CreatureAccessoryFactory.sol");
-const CreatureAccessoryLootBox = artifacts.require("../contracts/CreatureAccessoryLootBox.sol");
-const TestForReentrancyAttack = artifacts.require(
-  "../contracts/TestForReentrancyAttack.sol"
-);
+const MockProxyRegistry = artifacts.require('MockProxyRegistry');
+const LootBoxRandomness = artifacts.require('LootBoxRandomness');
+const CreatureAccessory = artifacts.require('CreatureAccessory');
+const CreatureAccessoryFactory = artifacts.require('CreatureAccessoryFactory');
+const CreatureAccessoryLootBox = artifacts.require('CreatureAccessoryLootBox');
+const TestForReentrancyAttack = artifacts.require('TestForReentrancyAttack');
 
 
 /* Useful aliases */
@@ -54,7 +48,7 @@ contract("CreatureAccessoryFactory", (accounts) => {
     proxy = await MockProxyRegistry.new();
     await proxy.setProxy(owner, proxyForOwner);
     creatureAccessory = await CreatureAccessory.new(proxy.address);
-    CreatureAccessoryLootBox.link(LootBoxRandomness);
+    CreatureAccessoryLootBox.link(LootBoxRandomness.address);
     myLootBox = await CreatureAccessoryLootBox.new(
       proxy.address,
       { gas: 6721975 }

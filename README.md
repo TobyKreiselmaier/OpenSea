@@ -171,7 +171,7 @@ To implement the ERC1155 standard, these contracts use the Multi Token Standard 
 
 In one terminal window, run:
 
-    yarn run ganache-cli
+ganache-cli -e 1000000 -l 10000000
 
 Once Ganache has started, run the following in another terminal window:
 

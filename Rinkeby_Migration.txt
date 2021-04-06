@@ -1,0 +1,151 @@
+truffle(rinkeby)> deploy
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\Creature.sol
+> Compiling .\contracts\CreatureAccessory.sol
+> Compiling .\contracts\CreatureAccessoryFactory.sol
+> Compiling .\contracts\CreatureAccessoryLootBox.sol
+> Compiling .\contracts\CreatureFactory.sol
+> Compiling .\contracts\CreatureLootBox.sol
+> Compiling .\contracts\ERC1155Tradable.sol
+> Compiling .\contracts\ERC721Tradable.sol
+> Compiling .\contracts\IFactoryERC1155.sol
+> Compiling .\contracts\IFactoryERC721.sol
+> Compiling .\contracts\LootBoxRandomness.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\Strings.sol
+> Compiling .\contracts\test\MockProxyRegistry.sol
+> Compiling .\contracts\test\TestForReentrancyAttack.sol
+> Compiling .\contracts\Creature.sol
+> Compiling .\contracts\CreatureAccessoryFactory.sol
+> Compiling .\contracts\CreatureLootBox.sol
+> Compiling .\contracts\ERC1155Tradable.sol
+> Compiling .\contracts\ERC721Tradable.sol
+> Compiling .\contracts\IFactoryERC1155.sol
+> Compiling .\contracts\IFactoryERC721.sol
+> Compiling .\contracts\LootBoxRandomness.sol
+> Compiling .\contracts\Strings.sol
+> Compiling multi-token-standard/contracts/interfaces/IERC1155TokenReceiver.sol
+> Compiling multi-token-standard/contracts/tokens/ERC1155/ERC1155.sol
+> Compiling multi-token-standard/contracts/tokens/ERC1155/ERC1155Metadata.sol
+> Compiling multi-token-standard/contracts/tokens/ERC1155/ERC1155MintBurn.sol
+> Compiling multi-token-standard/contracts/utils/SafeMath.sol
+> Compiling multi-token-standard\contracts\interfaces\IERC1155.sol
+> Compiling multi-token-standard\contracts\interfaces\IERC1155TokenReceiver.sol
+> Compiling multi-token-standard\contracts\interfaces\IERC165.sol
+> Compiling multi-token-standard\contracts\tokens\ERC1155\ERC1155.sol
+> Compiling multi-token-standard\contracts\utils\Address.sol
+> Compiling multi-token-standard\contracts\utils\SafeMath.sol
+> Compiling openzeppelin-solidity/contracts/ownership/Ownable.sol
+> Compiling openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol
+> Compiling openzeppelin-solidity/contracts/utils/ReentrancyGuard.sol
+> Compiling openzeppelin-solidity\contracts\GSN\Context.sol
+> Compiling openzeppelin-solidity\contracts\drafts\Counters.sol
+> Compiling openzeppelin-solidity\contracts\introspection\ERC165.sol
+> Compiling openzeppelin-solidity\contracts\introspection\IERC165.sol
+> Compiling openzeppelin-solidity\contracts\math\SafeMath.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\ERC721.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\ERC721Enumerable.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\ERC721Metadata.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\IERC721.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\IERC721Enumerable.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\IERC721Metadata.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\IERC721Receiver.sol
+> Compiling openzeppelin-solidity\contracts\utils\Address.sol
+> Compilation warnings encountered:
+
+    /C/Users/tkrei/OneDrive/OpenSea/contracts/CreatureFactory.sol:135:9: Warning: Unused function parameter. Remove or comment out the variable 
+name to silence this warning.
+        address _from,
+        ^-----------^
+,/C/Users/tkrei/OneDrive/OpenSea/contracts/CreatureFactory.sol:170:22: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function ownerOf(uint256 _tokenId) public view returns (address _owner) {
+                     ^--------------^
+
+> Artifacts written to C:\Users\tkrei\OneDrive\OpenSea\build\contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 10000000 (0x989680)
+
+
+1_initial_migrations.js
+=======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x83c8b2187093f524e41299c400ac4ee780d692ee403bbf160c9c2a0188864556
+   > Blocks: 0            Seconds: 12
+   > contract address:    0x70828E92071f22653BDC4e8Ce3DCD1E95AD60BEb
+   > block number:        8367695
+   > block timestamp:     1617749079
+   > account:             0xe7B43a30C548263345F9809Bf42Fb09688EFD0aA
+   > balance:             18.74546926
+   > gas used:            226537 (0x374e9)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00453074 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00453074 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'Creature'
+   --------------------
+   > transaction hash:    0x27f10e3eb977d1c7153e37b6b4cc2aa39607f579a7710eda8915fbfd6985f8cf
+   > Blocks: 0            Seconds: 12
+   > contract address:    0x073c57a5D5cC3CE42f8474fD4f637E063CD5F093
+   > block number:        8367697
+   > block timestamp:     1617749109
+   > account:             0xe7B43a30C548263345F9809Bf42Fb09688EFD0aA
+   > balance:             18.68368632
+   > gas used:            3043384 (0x2e7038)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.06086768 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.06086768 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.06539842 ETH
+
+
+
+> Duplicate contract names found for OwnableDelegateProxy.
+> This can cause errors and unknown behavior. Please rename one of your contracts.
+
+> Duplicate contract names found for ProxyRegistry.
+> This can cause errors and unknown behavior. Please rename one of your contracts.
+
+> Duplicate contract names found for IERC165.
+> This can cause errors and unknown behavior. Please rename one of your contracts.
+
+> Duplicate contract names found for SafeMath.
+> This can cause errors and unknown behavior. Please rename one of your contracts.
+
+> Duplicate contract names found for Address.
+> This can cause errors and unknown behavior. Please rename one of your contracts.
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.

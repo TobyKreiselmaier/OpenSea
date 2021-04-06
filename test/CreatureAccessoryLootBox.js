@@ -118,7 +118,7 @@ contract("CreatureAccessoryLootBox", (accounts) => {
     proxy = await MockProxyRegistry.new();
     await proxy.setProxy(owner, proxyForOwner);
     creatureAccessory = await CreatureAccessory.new(proxy.address);
-    CreatureAccessoryLootBox.link(LootBoxRandomness);
+    CreatureAccessoryLootBox.link(LootBoxRandomness.address);
     lootBox = await CreatureAccessoryLootBox.new(
       proxy.address,
       { gas: 6721975 }

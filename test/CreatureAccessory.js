@@ -1,17 +1,14 @@
-/* Contracts in this test */
-
-const CreatureAccessory = artifacts.require(
-  "../contracts/CreatureAccessory.sol"
-);
-
+const CreatureAccessory = artifacts.require('CreatureAccessory');
 
 contract("CreatureAccessory", (accounts) => {
   const URI_BASE = 'https://creatures-api.opensea.io';
   const CONTRACT_URI = `${URI_BASE}/contract/opensea-erc1155`;
   let creatureAccessory;
+  let proxyRegistryAddress = "0xf57b2c51ded3a29e6891aba85459d600256cf317"; //this is Rinkeby
+ 
 
   before(async () => {
-    creatureAccessory = await CreatureAccessory.deployed();
+    creatureAccessory = await CreatureAccessory.new(proxyRegistryAddress);
   });
 
   // This is all we test for now

@@ -1,7 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const fs = require('fs');
-const mnemonic_rinkeby = fs.existsSync('.secret_kovan')
-    ? fs.readFileSync('.secret_kovan').toString().trim()
+const mnemonic_rinkeby = fs.existsSync('.secret_rinkeby')
+    ? fs.readFileSync('.secret_rinkeby').toString().trim()
     : null;
 const mnemonic_ethereum = fs.existsSync('.secret_ethereum')
     ? fs.readFileSync('.secret_ethereum').toString().trim()
@@ -35,7 +35,7 @@ module.exports = {
   },
   compilers: {
     solc: {
-      version: '0.5.12',
+      version: '0.5.16',
       optimizer: {
           enabled: true,
           runs: 200,
